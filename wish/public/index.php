@@ -101,10 +101,10 @@ try {
     /**
      * Register a user component
      */
-//     $di->set('elements', function ()
-//     {
-//         return new Elements();
-//     });
+    $di->set('elements', function ()
+    {
+        return new Elements();
+    });
     Logger::init("../log/fb.log", 1);
     Logger::info('start');
     // Handle the request
