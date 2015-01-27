@@ -65,20 +65,20 @@ try {
     /**
      * Setting up volt
      */
-//     $di->set('volt', function ($view, $di)
-//     {
+    $di->set('volt', function ($view, $di)
+    {
         
-//         $volt = new \Phalcon\Mvc\View\Engine\Volt($view, $di);
+        $volt = new \Phalcon\Mvc\View\Engine\Volt($view, $di);
         
-//         $volt->setOptions(array(
-//             "compiledPath" => "../cache/volt/"
-//         ));
+        $volt->setOptions(array(
+            "compiledPath" => "../cache/volt/"
+        ));
         
-//         $compiler = $volt->getCompiler();
-//         $compiler->addFunction('is_a', 'is_a');
+        $compiler = $volt->getCompiler();
+        $compiler->addFunction('is_a', 'is_a');
         
-//         return $volt;
-//     }, true);
+        return $volt;
+    }, true);
     
     $di->set('session', function ()
     {
