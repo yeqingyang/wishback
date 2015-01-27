@@ -29,6 +29,9 @@ li {list-style:none;}
 <li><a href="/">Home</a></li>
 <?php 
 echo "<li>";
+echo Phalcon\Tag::linkTo("session", "SignIn");
+echo "</li>";
+echo "<li>";
 echo Phalcon\Tag::linkTo("user", "User");
 echo "</li>";
 ?>
