@@ -43,17 +43,17 @@ try {
     });
     
     // Setting up the view component
-//     $di->set('view', function ()
-//     {
-//         $view = new \Phalcon\Mvc\View();
-//         $view->setViewsDir('../app/views/');
-//         $view->registerEngines(array(
-//             ".volt" => 'Phalcon\Mvc\View\Engine\Volt',
-//             ".phtml" => 'Phalcon\Mvc\View\Engine\Php',
-//             ".php" => 'Phalcon\Mvc\View\Engine\Php'
-//         ));
-//         return $view;
-//     });
+    $di->set('view', function ()
+    {
+        $view = new \Phalcon\Mvc\View();
+        $view->setViewsDir('../app/views/');
+        $view->registerEngines(array(
+            ".volt" => 'Phalcon\Mvc\View\Engine\Volt',
+            ".phtml" => 'Phalcon\Mvc\View\Engine\Php',
+            ".php" => 'Phalcon\Mvc\View\Engine\Php'
+        ));
+        return $view;
+    });
     
     $di->set('url', function ()
     {
