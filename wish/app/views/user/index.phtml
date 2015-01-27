@@ -1,0 +1,41 @@
+<h2>User using this form</h2>
+
+<?php echo Phalcon\Tag::form(array('user/getUser','method'=>'get')) ?>
+	
+	<p>
+		<label for="name">Name</label>
+		<?php echo Phalcon\Tag::textField("uname") ?>
+	</p>
+
+	<p>
+		<?php echo Phalcon\Tag::submitButton("getUser") ?>
+	</p>
+
+</form>
+
+<?php echo Phalcon\Tag::form(array('user/addUser','method'=>'post')) ?>
+	
+	<p>
+		<label for="name">Name</label>
+		<?php echo Phalcon\Tag::textField("uname") ?>
+	</p>
+
+	<p>
+		<label for="name">E-Mail</label>
+		<?php echo Phalcon\Tag::textField("email") ?>
+	</p>
+	<p>
+		<label for="name">Password</label>
+		<?php echo Phalcon\Tag::textField("password") ?>
+	</p>
+	<p>
+		<label for="name">Password_Again</label>
+		<?php echo Phalcon\Tag::textField("password2") ?>
+	</p>
+
+	<p>
+		<?php echo Phalcon\Tag::submitButton("Register") ?>
+	</p>
+
+</form>
+
