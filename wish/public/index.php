@@ -23,6 +23,7 @@ try {
     $loader->registerDirs(array(
         '../app/controllers/',
         '../app/models/',
+        '../app/library/',
         '../lib/',
         '../def/'
     ))->register();
