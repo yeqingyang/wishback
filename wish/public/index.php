@@ -38,7 +38,7 @@ try {
             "host" => "192.168.1.41",
             "username" => "root",
             "password" => "123456",
-            "dbname" => "friends_bill",
+            "dbname" => "lpz_wish",
             "charset" => "utf8"
         ));
     });
