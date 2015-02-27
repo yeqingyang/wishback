@@ -7,7 +7,6 @@
                 <span class="icon-bar"></span>
             </a>
             <a class="brand" href="#">HUASI</a>
-            {{ this.elements.getMenu() }}
         </div>
     </div>
 </div>
