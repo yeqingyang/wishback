@@ -28,12 +28,7 @@ li {list-style:none;}
 <ul>
 <li><a href="/">Home</a></li>
 <?php 
-echo "<li>";
-echo Phalcon\Tag::linkTo("session", "SignIn");
-echo "</li>";
-echo "<li>";
-echo Phalcon\Tag::linkTo("user", "User");
-echo "</li>";
+echo $this->elements->getMenu();
 ?>
 </ul>
 </div>
