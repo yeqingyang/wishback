@@ -6,7 +6,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">HUASI</a>
         </div>
     </div>
 </div>
@@ -15,7 +14,4 @@
     {{ flash.output() }}
     {{ content() }}
     <hr>
-    <footer>
-        <p>&copy; Company 2014</p>
-    </footer>
 </div>
