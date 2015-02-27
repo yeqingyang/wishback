@@ -2,7 +2,7 @@
 {{ content() }}
 
 <div class="page-header">
-    <h2>Register for INVO</h2>
+    <h2>Register for WISH</h2>
 </div>
 
 {{ form('session/register', 'id': 'registerForm', 'class': 'form-horizontal', 'onbeforesubmit': 'return false') }}
