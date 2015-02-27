@@ -61,8 +61,8 @@ class SessionController extends ControllerBase
     private function _registerSession($user)
     {
         $this->session->set('auth', array(
-            'id' => $user->id,
-            'name' => $user->name
+            'id' => $user->uid,
+            'name' => $user->uname
         ));
     }
 
@@ -90,7 +90,7 @@ class SessionController extends ControllerBase
             if ($user != false) {
                 $this->_registerSession($user);
                 $this->flash->success('Welcome ' . $user->name);
-                return $this->forward('user/index');
+                return $this->forward('User/index');
             }
 
             $this->flash->error('Wrong email/password');
