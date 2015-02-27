@@ -82,7 +82,7 @@ class Elements extends Phalcon\Mvc\User\Component
                 'action' => 'end'
             );
             $this->_headerMenu['pull-right']['User'] = array(
-                'caption' => $auth['uname'],
+                'caption' => $auth['name'],
                 'action' => 'info'
             );
         } else {
