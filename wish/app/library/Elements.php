@@ -81,8 +81,13 @@ class Elements extends Phalcon\Mvc\User\Component
                 'caption' => 'Log Out',
                 'action' => 'end'
             );
+            $this->_headerMenu['pull-right']['User'] = array(
+                'caption' => $auth['uname'],
+                'action' => 'info'
+            );
         } else {
             unset($this->_headerMenu['pull-left']['User']);
+            unset($this->_headerMenu['pull-right']['User']);
         }
 
         echo '<div class="nav-collapse">';
