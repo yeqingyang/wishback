@@ -72,5 +72,13 @@ class UserController extends ControllerBase
 		$user = User::findFirst("uid=$uid");
 		$user->delete();
 	}
+	
+	public function infoAction($uid){
+	    $auth = $this->session->get('auth');
+	    if(isset($auth['info'])){
+	        $user = $auth['info'];
+	    }
+	    var_dump($user);
+	}
 
 }

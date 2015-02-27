@@ -62,7 +62,8 @@ class SessionController extends ControllerBase
     {
         $this->session->set('auth', array(
             'id' => $user->uid,
-            'name' => $user->uname
+            'name' => $user->uname,
+            'info' => $user
         ));
     }
 

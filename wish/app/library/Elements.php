@@ -32,6 +32,10 @@ class Elements extends Phalcon\Mvc\User\Component
                 'caption' => 'Log In/Sign Up',
                 'action' => 'index'
             ),
+            'User' => array(
+                'caption' => '?',
+                'action' => 'info'
+            ),
         )
     );
 
