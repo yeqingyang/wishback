@@ -81,15 +81,15 @@ class SessionController extends ControllerBase
             $user = User::findFirst("email='$email' AND password='$password' AND status='1'");
             if ($user != false) {
                 $this->_registerSession($user);
-                $this->flash->success('Welcome ' . $user->name);
-                return $this->forward('user/index');
+                $this->flash->success('Welcome ' . $user->uname);
+                return $this->forward('User/index');
             }
 
             $username = $this->request->getPost('email', 'alphanum');
             $user = User::findFirst("uname='$username' AND password='$password' AND status='1'");
             if ($user != false) {
                 $this->_registerSession($user);
-                $this->flash->success('Welcome ' . $user->name);
+                $this->flash->success('Welcome ' . $user->uname);
                 return $this->forward('User/index');
             }
 
