@@ -73,12 +73,12 @@ class UserController extends ControllerBase
 		$user->delete();
 	}
 	
-	public function infoAction($uid){
+	public function infoAction(){
 	    $auth = $this->session->get('auth');
 	    if(isset($auth['info'])){
 	        $user = $auth['info'];
+	        var_dump($user);
 	    }
-	    var_dump($user);
 	}
 
 }
