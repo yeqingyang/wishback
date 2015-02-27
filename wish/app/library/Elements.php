@@ -14,8 +14,8 @@ class Elements extends Phalcon\Mvc\User\Component
                 'caption' => 'Home',
                 'action' => 'index'
             ),
-            'invoices' => array(
-                'caption' => 'Invoices',
+            'User' => array(
+                'caption' => 'User',
                 'action' => 'index'
             ),
             'about' => array(
@@ -78,7 +78,7 @@ class Elements extends Phalcon\Mvc\User\Component
                 'action' => 'end'
             );
         } else {
-            unset($this->_headerMenu['pull-left']['invoices']);
+            unset($this->_headerMenu['pull-left']['User']);
         }
 
         echo '<div class="nav-collapse">';
