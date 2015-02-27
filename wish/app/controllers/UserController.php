@@ -77,7 +77,7 @@ class UserController extends ControllerBase
 	    $auth = $this->session->get('auth');
 	    if(isset($auth['info'])){
 	        $user = $auth['info'];
-	        var_dump($user);
+	        var_dump($user->toArray());
 	    }
 	}
 
