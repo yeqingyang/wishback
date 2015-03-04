@@ -1,0 +1,121 @@
+
+<?php echo $this->getContent(); ?>
+
+<?php echo $this->tag->form("user/save") ?>
+
+<table width="100%">
+    <tr>
+        <td align="left"><?php echo $this->tag->linkTo(array("user", "Back")) ?></td>
+        <td align="right"><?php echo $this->tag->submitButton("Save") ?></td>
+    </tr>
+</table>
+
+<div align="center">
+    <h1>Edit user</h1>
+</div>
+
+<table>
+    <tr>
+        <td align="right">
+            <label for="usetime">Usetime</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("usetime", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="uname">Uname</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("uname", "size" => 30)) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="email">Email</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("email", "size" => 30)) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="status">Status</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("status", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="create_time">Create Of Time</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("create_time", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="dtime">Dtime</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("dtime", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="birthday">Birthday</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("birthday", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="gold_num">Gold Of Num</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("gold_num", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="reward_point">Reward Of Point</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("reward_point", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="last_login_time">Last Of Login Of Time</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("last_login_time", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="online_accum_time">Online Of Accum Of Time</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("online_accum_time", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="password">Password</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("password", "size" => 30)) ?>
+        </td>
+    </tr>
+
+    <tr>
+        <td><?php echo $this->tag->hiddenField("uid") ?></td>
+        <td><?php echo $this->tag->submitButton("Save") ?></td>
+    </tr>
+</table>
+
+</form>

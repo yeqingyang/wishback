@@ -1,0 +1,62 @@
+<?php use Phalcon\Tag; ?>
+
+<?php echo $this->getContent(); ?>
+
+<table width="100%">
+    <tr>
+        <td align="left">
+            <?php echo $this->tag->linkTo(array("bill/index", "Go Back")); ?>
+        </td>
+        <td align="right">
+            <?php echo $this->tag->linkTo(array("bill/new", "Create ")); ?>
+        </td>
+    </tr>
+</table>
+
+<table class="browse" align="center">
+    <thead>
+        <tr>
+            <th>Bid</th>
+            <th>Bname</th>
+            <th>Gid</th>
+            <th>Cost</th>
+            <th>Uid</th>
+            <th>Create Of Time</th>
+            <th>Finish Of Time</th>
+            <th>Status</th>
+            <th>Place</th>
+         </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($page->items as $bill) { ?>
+        <tr>
+            <td><?php echo $bill->bid ?></td>
+            <td><?php echo $bill->bname ?></td>
+            <td><?php echo $bill->gid ?></td>
+            <td><?php echo $bill->cost ?></td>
+            <td><?php echo $bill->uid ?></td>
+            <td><?php echo $bill->create_time ?></td>
+            <td><?php echo $bill->finish_time ?></td>
+            <td><?php echo $bill->status ?></td>
+            <td><?php echo $bill->place ?></td>
+            <td><?php echo $this->tag->linkTo(array("bill/edit/" . $bill->bid, "Edit")); ?></td>
+            <td><?php echo $this->tag->linkTo(array("bill/delete/" . $bill->bid, "Delete")); ?></td>
+        </tr>
+    <?php } ?>
+    </tbody>
+    <tbody>
+        <tr>
+            <td colspan="2" align="right">
+                <table align="center">
+                    <tr>
+                        <td><?php echo $this->tag->linkTo("bill/search", "First") ?></td>
+                        <td><?php echo $this->tag->linkTo("bill/search?page=" . $page->before, "Previous") ?></td>
+                        <td><?php echo $this->tag->linkTo("bill/search?page=" . $page->next, "Next") ?></td>
+                        <td><?php echo $this->tag->linkTo("bill/search?page=" . $page->last, "Last") ?></td>
+                        <td><?php echo $page->current, "/", $page->total_pages ?></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>

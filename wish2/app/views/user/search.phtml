@@ -1,0 +1,70 @@
+<?php use Phalcon\Tag; ?>
+
+<?php echo $this->getContent(); ?>
+
+<table width="100%">
+    <tr>
+        <td align="left">
+            <?php echo $this->tag->linkTo(array("user/index", "Go Back")); ?>
+        </td>
+        <td align="right">
+            <?php echo $this->tag->linkTo(array("user/new", "Create ")); ?>
+        </td>
+    </tr>
+</table>
+
+<table class="browse" align="center">
+    <thead>
+        <tr>
+            <th>Uid</th>
+            <th>Usetime</th>
+            <th>Uname</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Create Of Time</th>
+            <th>Dtime</th>
+            <th>Birthday</th>
+            <th>Gold Of Num</th>
+            <th>Reward Of Point</th>
+            <th>Last Of Login Of Time</th>
+            <th>Online Of Accum Of Time</th>
+            <th>Password</th>
+         </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($page->items as $user) { ?>
+        <tr>
+            <td><?php echo $user->uid ?></td>
+            <td><?php echo $user->usetime ?></td>
+            <td><?php echo $user->uname ?></td>
+            <td><?php echo $user->email ?></td>
+            <td><?php echo $user->status ?></td>
+            <td><?php echo $user->create_time ?></td>
+            <td><?php echo $user->dtime ?></td>
+            <td><?php echo $user->birthday ?></td>
+            <td><?php echo $user->gold_num ?></td>
+            <td><?php echo $user->reward_point ?></td>
+            <td><?php echo $user->last_login_time ?></td>
+            <td><?php echo $user->online_accum_time ?></td>
+            <td><?php echo $user->password ?></td>
+            <td><?php echo $this->tag->linkTo(array("user/edit/" . $user->uid, "Edit")); ?></td>
+            <td><?php echo $this->tag->linkTo(array("user/delete/" . $user->uid, "Delete")); ?></td>
+        </tr>
+    <?php } ?>
+    </tbody>
+    <tbody>
+        <tr>
+            <td colspan="2" align="right">
+                <table align="center">
+                    <tr>
+                        <td><?php echo $this->tag->linkTo("user/search", "First") ?></td>
+                        <td><?php echo $this->tag->linkTo("user/search?page=" . $page->before, "Previous") ?></td>
+                        <td><?php echo $this->tag->linkTo("user/search?page=" . $page->next, "Next") ?></td>
+                        <td><?php echo $this->tag->linkTo("user/search?page=" . $page->last, "Last") ?></td>
+                        <td><?php echo $page->current, "/", $page->total_pages ?></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
